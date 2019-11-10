@@ -64,7 +64,7 @@ app.get("/post/:postTitle", function(req, res) {
   if (post) {
     res.render("post", {title: post.title, content: post.content});
   } else {
-    res.send(404);
+    res.sendStatus(404);
   }
 });
 
